@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "header"
+    "productos"
+    "metodos"
+    "footer";
+  height: 100vh;
+}
+
+.cabecera {
+  grid-area: header;
+  display: flex;
+  text-align: center;
+  height: 6rem;
+  background-color: rgb(33, 61, 219);
+}
+
+.footer {
+  grid-area: footer;
+  height: 15.5rem;
+  background-color: rgb(33, 61, 219);
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  padding-top: 5.5%;
+  text-align: center;
+}
+
+.footer img {
+  height: auto;
+  object-fit: cover;
+  width: 25%;
+}
+
+.fa-brands {
+  text-decoration: none;
+  font-size: 375%;
+  color: white;
+  margin-left: 25px;
+}
+
+footer p {
+  color: black;
+  padding-top: 2%;
+}
+
+.cabecera__nav {
+  display: flex;
+}
+
+.cabecera__nav ul {
+  display: flex;
+  padding-left: 150%;
+}
+
+.cabecera__nav ul li {
+  display: flex;
+  list-style-type: none;
+}
+
+.cabecera__nav li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  padding: 55px 15px;
+}
+
+.cabecera__nav li a:hover {
+  background-color: rgb(17, 43, 192);
+  ;
+  color: white;
+}
+
+.cabecera nav img {
+  width: 9.5rem;
+  padding-left: 20%;
+  margin-bottom: 100%;
+}
+
+.container {
+  padding: 3em;
+}
+
+.container h1 {
+  color: black;
+  padding-left: 43%;
+}
+
+.container__producto__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 1%;
+}
+
+.container__producto {
+  background-color: white;
+  border-radius: 10px;
+  padding: 6rem;
+  text-align: center;
+}
+
+.container__producto__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.container__producto__description {
+  text-align: left;
+  margin-left: 2.0em;
+  margin-bottom: 0.5em;
+}
+
+.container__producto__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover
+}
+
+.container__producto__price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.container__producto__button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.pagos {
+  grid-area: metodos;
+}
+
+.grid__oficinas__container {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "header"
+    "mapa"
+    "footer";
+  height: 100vh;
+}
+
+.ubicaciones {
+  grid-area: mapa;
+  padding: 6rem;
+  text-align: center;
+}
+
+
+.ubicaciones h1 {
+  color: black;
+  padding-left: 10%;
+}
+
+.grid__nosotros__container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "header"
+    "nosotros"
+    "footer";
+  height: 100vh;
+}
+
+.description {
+  grid-area: nosotros;
+  padding: 6rem;
+  text-align: center;
+  padding-top: 0px;
+}
+
+.description h1 {
+  color: black;
+  padding-left: 10%;
+}
+
+
+.grid__contacto__container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "header"
+    "contacto"
+    "footer";
+  height: 100vh;
+}
+
+/* Inicio de estilo del formulario*/
+.container__form {
+  grid-area: contacto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  max-width: 500px;
+  margin: auto;
+  justify-self: center;
+}
+
+
+.form__container h1 {
+  padding-left: 35%;
+}
+
+
+input[type=text],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=reset] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Fin del estilo de formularios*/
+
+.container__productos__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 1%;
+}
+
+.container__productos {
+  background-color: white;
+  border-radius: 10px;
+  padding: 6rem;
+  text-align: center;
+}
+
+.container__productos__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.container__productos__description {
+  text-align: left;
+  margin-left: 2.0em;
+  margin-bottom: 0.5em;
+}
+
+.container__productos__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover
+}
+
+.container__productos__price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.container__productos__button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.productos h1 {
+  color: black;
+  padding-left: 45%;
+}
