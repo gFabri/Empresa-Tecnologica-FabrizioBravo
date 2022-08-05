@@ -34,6 +34,126 @@
   text-align: center;
 }
 
+/* .container__producto__button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+} */
+
+.container__producto__button {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.container__producto__button:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: 100%;
+  height: 100%;
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.container__producto__button:active {
+  color: #000
+}
+
+.container__producto__button:active:after {
+  background: transparent;
+}
+
+.container__producto__button:hover:before {
+  opacity: 1;
+}
+
+.container__producto__button:after {
+  z-index: -1;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+@media screen and (max-width: 720px){
+  .grid__container {
+    display: grid;
+    grid-template-columns: 4fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "header"
+      "productos"
+      "metodos"
+      "footer";
+    height: 100vh;
+  }
+
+  .cabecera {
+    grid-area: header;
+    display: inline-flex;
+    text-align: center;
+    height: 6rem;
+    background-color: red;
+  }
+
+  .cabecera__nav ul {
+    display: flex;
+    padding-left: 150%;
+  }
+  
+  .cabecera__nav ul li {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .cabecera__nav li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 15px;
+  }
+  
+  .cabecera__nav li a:hover {
+    background-color: rgb(17, 43, 192);
+    ;
+    color: white;
+  }
+  
+  .cabecera nav img {
+    width: 9.5rem;
+    padding-left: 20%;
+    margin-bottom: 100%;
+  }
+}
+
 .footer img {
   height: auto;
   object-fit: cover;
@@ -129,16 +249,6 @@ footer p {
 .container__producto__price {
   font-size: 18px;
   font-weight: bold;
-}
-
-.container__producto__button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 12px;
 }
 
 .pagos {
